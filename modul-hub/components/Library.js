@@ -48,7 +48,7 @@ function Viewer({ item, onClose }) {
 
   return (
     <div className="overlay" onMouseDown={(e) => e.target === e.currentTarget && onClose()}>
-      <div className="modal">
+      <div className={`modal ${kind === 'pdf' ? 'tall' : ''}`}>
         <div className="modal-head">
           <h2>{item.title}</h2>
           <a className="btn ghost sm" href={item.url} download target="_blank" rel="noreferrer">Unduh</a>
